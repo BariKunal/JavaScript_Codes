@@ -1,4 +1,4 @@
-var num = 9474
+var num = 9474  //153,9475,54748
 var temp = num;
 var sum =0
 
