@@ -15,3 +15,9 @@ function show2(a,b){
 }
 let r = show2(9,9);
 console.log("Multiplication Is :", r)
+
+function show3(a,b){
+    return a/b;
+}
+let r1 = show3(81,9);
+console.log("Division Is :", r1)
