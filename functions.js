@@ -9,3 +9,9 @@ function show1(a,b){
 }
 let resu = show1(18,9);
 console.log("Subtraction Is :", resu)
+
+function show2(a,b){
+    return a*b;
+}
+let r = show2(9,9);
+console.log("Multiplication Is :", r)
