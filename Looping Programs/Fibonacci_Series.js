@@ -11,11 +11,18 @@ let fib,i=1;
 
 console.log(f0);
 console.log(f1);
-while(i<=num){
-    fib = f0+f1;
-    f0 = f1;
-    f1 = fib;
+// while(i<=num){
+//     fib = f0+f1;
+//     f0 = f1;
+//     f1 = fib;
+//     console.log(fib);
+//     i++;
+// }
+
+for(i=1; i<=num; i++){
+    fib = f0 + f1;
+    f0 = f1; 
+    f1 = fib; 
     console.log(fib);
-    i++;
 }
 
