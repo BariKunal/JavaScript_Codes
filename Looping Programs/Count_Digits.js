@@ -11,4 +11,4 @@ while(num!=0){
         count++
         num = Math.floor(num/10)
 }
-console.log("Count OF Digits IS :",count);
+console.log("Count Of Digits IS :",count);
