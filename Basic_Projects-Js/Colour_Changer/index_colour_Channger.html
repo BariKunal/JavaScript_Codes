@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+    <style>
+        body{
+            height: 700px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main{
+            height: 500px;
+            width: 800px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+        }
+        .button {
+            height: 150px;
+            width: 140px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 20px;
+           
+        }
+        #grey{
+            background-color: grey;
+        }
+        #white{
+            background-color: white;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click On Any Box To Change The Colour Of Background</h1>
+    <div class="main">
+
+        <div class="button" id="grey"></div>
+        <div class="button" id="white"></div>
+        <div class="button" id="yellow"></div>
+        <div class="button" id="red"></div>
+    </div>
+</body>
+    <script src="colour_changing.js"></script>
+</html>
