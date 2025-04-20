@@ -10,13 +10,13 @@ buttons.forEach(function (button){
         if(e.target.id === 'grey'){  //for grey id
             body.style.backgroundColor = e.target.id;
         }
-        if(e.target.id === 'white'){
+        if(e.target.id === 'white'){ // for white id
             body.style.backgroundColor = e.target.id;
         }
-        if(e.target.id === 'yellow'){
+        if(e.target.id === 'yellow'){  //for yellow id
             body.style.backgroundColor = e.target.id;
         }
-        if(e.target.id === 'red'){
+        if(e.target.id === 'red'){   //for red color id
             body.style.backgroundColor = e.target.id;
         }
     });
