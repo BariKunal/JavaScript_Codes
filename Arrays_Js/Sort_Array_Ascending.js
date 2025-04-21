@@ -15,6 +15,8 @@ for (let i = 0; i < a.length-1; i++) {
         }
     }
 }
+console.log("Sorted Array in Ascending Order :");
+
 for (let i = 0; i < a.length; i++) {
     
     console.log(a[i]);
