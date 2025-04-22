@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EMI.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Home Loan EMI Calculator</h1>
+        <div class="all_input">
+            <!-- <label >Loan Amount</label> -->
+            <input type="range" id="amount" min="100000" max="5000000" step="1" value="2500000">
+            <input type="text"  id="val" readonly placeholder="Loan Amount">
+        </div>
+
+        <div class="all_input">
+            <!-- <label>Tenure (Years)</label> -->
+            <input type="range"  id="year" min="1" max="30" step="1" value="30">
+            <input type="text"  id="yValue" placeholder="Tenure (Years)">
+        </div>
+
+        <div class="all_input">
+            <!-- <label>Interest Rate</label> -->
+            <input type="range" id="rate" min="0.5" max="15" step="0.1" value="8.7">
+            <input type="text" id="rateVal" placeholder="Interest Rate">
+        </div>
+
+        <div class="result">
+            <h2>Monthly EMI: ₹<span id="emi">0</span></h2>
+        </div>
+    </div>
+
+    <script src="EMI.js"></script>
+
+</body>
+</html>

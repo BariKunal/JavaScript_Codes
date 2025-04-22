@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(82, 77, 77);
+}
+.container{
+    height: 700px;
+    width: 100%;
+    background-color: rgb(224, 195, 166);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    gap: 10px;
+}
+.all_input{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* gap:20px; */
+}
+.all_input input{
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.result{
+    width: 50%;
+    margin-top: 30px;
+    background-color: #c4d6e3;
+    padding: 20px;
+    border-radius: 10px;
+}
