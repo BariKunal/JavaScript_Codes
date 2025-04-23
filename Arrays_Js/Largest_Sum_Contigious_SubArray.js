@@ -6,14 +6,16 @@
 // Output: 6
 
 let a = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-let sum=0
+let sum = 0
+maxSum = 0
 for (let i = 0; i < a.length; i++) {
-    // sum=0
-    for (let j = i+1; j < a.length; j++) {
-        for()
-        sum = sum+a[j]                  //incomplete.....
-        
+    sum += a[i]
+    if(sum>maxSum){
+        maxSum = sum
+    }
+    else if(sum<0){
+        sum = 0
     }
     
 }
-console.log(sum);
+console.log("Largest Sum of Contiguous Subarray is : "+maxSum);
