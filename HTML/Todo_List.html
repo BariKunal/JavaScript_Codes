@@ -1,36 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
 </head>
-<body >
-    <!-- <input type="text" name="n" id="txt" placeholder="Enter The Data" onload="CreateTodoList()"> -->
-<div class="container" id="Cont" >//onload="CreateTodoList()">
 
-</div>
-    
+<body>
+
+    <script>
+        let bdy = document.body;
+        bdy.style.background = "black";
+        bdy.style.height = "100vh";
+        bdy.style.width = "100vw";
+        bdy.style.display = "flex"
+        bdy.style.alignItems = "center"
+        bdy.style.justifyContent = "center"
+        bdy.style.border = "1px solid black";
+
+        let divMain = document.createElement("div");
+        divMain.style.height = "600px"
+        divMain.style.width = "480px"
+        divMain.style.display = "flex"
+        divMain.style.borderRadius = "20px"
+        divMain.style.border = "2px solid black"
+        divMain.style.flexDirection = "column"
+        divMain.style.justifyContent = "center"
+        divMain.style.alignItems = "center"
+        divMain.style.backgroundColor = "white"
+        bdy.append(divMain);
+
+        let headDiv = document.createElement("div");
+        headDiv.style.height = "180px"
+        headDiv.style.width = "480px"
+        headDiv.style.backgroundColor = "orange"
+        headDiv.style.borderRadius = "20px"
+        headDiv.style.display = "flex"
+        headDiv.style.flexDirection = "column"
+        headDiv.style.alignItems = "center"
+        headDiv.style.justifyContent = "center"
+
+        let h1_Head = document.createElement("h1")
+        h1_Head.innerHTML = "Todo List"
+        headDiv.innerText = "Theme";
+
+        let c = 0, d = 0;
+        let h3_Head = document.createElement("h3")
+        h3_Head.style.margin = "-10px"
+        h3_Head.innerText = `You have ${c} of ${c} tasks remaining`;
+
+        headDiv.append(h1_Head)
+        headDiv.append(h3_Head)
+        divMain.append(headDiv)
+
+        let inputDiv = document.createElement("div")
+        inputDiv.style.height = "420px"
+        inputDiv.style.width = "480px"
+        // inputDiv.style.border = "1px solid black"
+
+        let inpTag = document.createElement("input")
+        inpTag.setAttribute("type", "text")
+        inpTag.setAttribute("name", "txt")
+        inpTag.setAttribute("id", "txtName")
+        inpTag.setAttribute("placeholder", "Add here")
+        inpTag.setAttribute("value", "")
+        inpTag.style.height = "40px"
+        inpTag.style.width = "280px"
+        inpTag.style.padding = "5px"
+        inpTag.style.borderRadius = "15px"
+        inpTag.style.marginTop = "30px"
+        inpTag.style.marginLeft = "45px"
+        inpTag.style.border = "1px solid black"
+
+        let btn = document.createElement("button")
+        btn.innerText = "Add"
+        btn.style.height = "50px"
+        btn.style.width = "60px"
+        btn.style.backgroundColor = "red"
+        btn.style.marginLeft = "25px"
+        btn.style.borderRadius = "15px"
+        btn.style.padding = "5px"
+        btn.style.border = "2px solid black"
+
+        inputDiv.append(inpTag)
+        inputDiv.append(btn)
+        divMain.append(inputDiv)
+
+        btn.addEventListener("click", function () {
+
+            if (inpTag.value=== '') {
+                alert("Please Enter Data")
+            }
+            else {
+                let addText = document.createElement("div")
+                addText.style.marginTop = "15px"
+                addText.style.marginLeft = "45px"
+                addText.style.display = "flex"
+                addText.style.justifyContent = "space-around"
+                addText.style.alignItems = "center"
+                addText.style.border = "1px solid black"
+                addText.style.width = "355px"
+                addText.style.height = "40px"
+                addText.style.marginLeft = "45px"
+
+                let remBtn = document.createElement("button")
+                remBtn.innerText = "Delete"
+                remBtn.style.height = "30px"
+                remBtn.style.width = "60px"
+                remBtn.style.backgroundColor = "red"
+                remBtn.style.margin = "10px"
+                remBtn.style.padding = "5px"
+                remBtn.style.border = "1px solid black"
+                addText.innerText = inpTag.value
+                addText.append(remBtn)
+
+                inputDiv.append(addText)
+                inpTag.value = ""
+                c++
+
+
+                remBtn.addEventListener("click", function () {
+                    c--
+                    addText.remove()
+
+                    updateTaskCount()
+                })
+                updateTaskCount()
+            }
+
+        })
+        function updateTaskCount() {
+            h3_Head.innerText = `You have ${c} of ${c} tasks remaining`;
+        }
+
+    </script>
 </body>
-<script>
-    function CreateTodoList(){
 
-        let container = document.getElementById("Cont");
-        // todo.style.width="50%";
-        // todo.style.height="100px";
-    
-        let todo = document.createElement("input");
-        todo.setAttribute("name","n");
-        todo.setAttribute("id","txt");
-        todo.setAttribute("placeholder","Enter Details");
-        todo.setAttribute("value","");
-        todo.style.width="400px";
-		todo.style.padding="20px";
-		todo.style.marginTop="20px";
-
-        container.appendChild(todo);
-        window.onload=CreateTodoList;
-    }
-        
-</script>
 </html>
