@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body >
+    <!-- <input type="text" name="n" id="txt" placeholder="Enter The Data" onload="CreateTodoList()"> -->
+<div class="container" id="Cont" >//onload="CreateTodoList()">
+
+</div>
+    
+</body>
+<script>
+    function CreateTodoList(){
+
+        let container = document.getElementById("Cont");
+        // todo.style.width="50%";
+        // todo.style.height="100px";
+    
+        let todo = document.createElement("input");
+        todo.setAttribute("name","n");
+        todo.setAttribute("id","txt");
+        todo.setAttribute("placeholder","Enter Details");
+        todo.setAttribute("value","");
+        todo.style.width="400px";
+		todo.style.padding="20px";
+		todo.style.marginTop="20px";
+
+        container.appendChild(todo);
+        window.onload=CreateTodoList;
+    }
+        
+</script>
+</html>
