@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <!-- /<link rel="stylesheet" href="todo.js"> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="mainBox">
+            <div class="headText">
+                <h1>Task Manager</h1>
+            </div>
+            <div class="inputTag">
+                <input type="text" name="" id="txtTag" placeholder="What needs to be done ?">
+                <button class="btn" id="button" onclick="AddText()">Add Task</button>
+            </div>
+            <div id="addTask">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function AddText() {
+            let inputTag = document.getElementById("txtTag")
+            let ul = document.getElementById("addTask");
+            if (inputTag.value === '') {
+                alert("Add Text First")
+            }
+            let li = document.createElement("li");
+            li.style.textDecoration="none"
+            li.style.textDecorationColor="none"
+            li.innerHTML=inputTag.value;
+            ul.appendChild(li)
+        }
+    </script>
+    <!-- <script src="./todo.js"></script> -->
+</body>
+
+</html>
