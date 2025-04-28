@@ -30,14 +30,29 @@
         function AddText() {
             let inputTag = document.getElementById("txtTag")
             let ul = document.getElementById("addTask");
-            if (inputTag.value === '') {
+            if (inputTag.value === "") {
                 alert("Add Text First")
             }
-            let li = document.createElement("li");
-            li.style.textDecoration="none"
-            li.style.textDecorationColor="none"
-            li.innerHTML=inputTag.value;
-            ul.appendChild(li)
+            let textDiv = document.createElement("div");
+            textDiv.style.height="40px"
+            textDiv.style.width="330px"
+            textDiv.style.border="1px solid black"
+            textDiv.style.display="flex"
+            textDiv.style.justifyContent="space-between"
+            textDiv.style.alignItems="center"
+
+            let btnRemove = document.createElement("button")
+            btnRemove.innerText="Remove"
+            btnRemove.style.height="40px"
+            btnRemove.style.width="70px"
+            textDiv.innerHTML=inputTag.value;
+            textDiv.appendChild(btnRemove)
+            ul.appendChild(textDiv)
+            inputTag.value = ""
+
+            btnRemove.addEventListener("click", function(){
+                textDiv.remove()
+            })
         }
     </script>
     <!-- <script src="./todo.js"></script> -->
