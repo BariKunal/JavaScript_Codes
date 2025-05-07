@@ -5,16 +5,15 @@
 // Output: Perfect Cube
 
 let num = 27
-let cube = 0 
 let i = 1
-while(i<=num){
-    cube += i*i*i
+while (i * i * i < num) {
     i++
 }
-if(num == cube){
+console.log(cube);
+
+if (num == i * i * i) {
     console.log("Perfect Cube...")
 }
-else{
-    console.log("Not");
-    
+else {
+    console.log("Not Perfect Cubes...");
 }
