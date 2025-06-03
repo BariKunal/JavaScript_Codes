@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Changer</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .cover {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: 10px; */
+        gap: 20px;
+        background-color: #d2c2af;
+
+    }
+
+    .btn {
+        height: 44px;
+        width: 120px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .p-tag {
+        width: 20%;
+        border-left: 3px solid #5a5252;
+        line-height: 24px;
+        /* margin-left: 20px; */
+        padding: 10px;
+        border-radius: 5px;
+        /* background-color: aquamarine; */
+        background-color: rgba(190, 189, 189, 0.1);
+        background-image: linear-gradient(to right, rgb(47, 52, 211) rgb(80, 39, 91));
+    }
+</style>
+
+<body>
+    <section>
+        <div class="cover">
+            <div class="box">
+
+                <button class="btn" id="bts1">#f00000</button>
+                <button class="btn" id="bts2">#000000</button>
+            </div>
+            <h4>Copy Your Code Here</h4>
+            <div class="p-tag">
+
+                background-image: linear-gradient(to right,
+                rgb(47,52,211) rgb(80, 39, 91))
+
+            </div>
+        </div>
+    </section>
+    <script>
+        let btn1 = document.getElementById("bts1");
+        let btn2 = document.getElementById("bts2");
+
+        let color = '#'
+        const handlebtn1 = () => {
+
+            let hexaValue = "0123456789abcdef"
+            for (let i = 0; i < 6; i++) {
+                color+= console.log(hexaValue( Math.floor[Math.random() * 16]));
+            }
+            console.log(color)
+        }
+
+        btn1.addEventListener("click",handlebtn1);
+        // btn2.addEventListener("click",handlebtn2);
+        
+    </script>
+</body>
+
+</html>
