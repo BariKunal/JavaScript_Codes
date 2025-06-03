@@ -22,7 +22,12 @@
         align-items: center;
         /* margin: 10px; */
         gap: 20px;
-        background-color: #d2c2af;
+        background-image: linear-gradient(to right top,
+                #051937,
+                #004d7a,
+                #008793,
+                #00bf72,
+                #a8eb12);
 
     }
 
@@ -67,19 +72,28 @@
         let btn1 = document.getElementById("bts1");
         let btn2 = document.getElementById("bts2");
 
-        let color = '#'
-        const handlebtn1 = () => {
-
+        const hexaValues = () => {
+            let color = '#'
             let hexaValue = "0123456789abcdef"
             for (let i = 0; i < 6; i++) {
-                color+= console.log(hexaValue( Math.floor[Math.random() * 16]));
+                color += hexaValue[Math.floor(Math.random() * 16)];
             }
-            console.log(color)
+            return color
         }
 
-        btn1.addEventListener("click",handlebtn1);
-        // btn2.addEventListener("click",handlebtn2);
-        
+        const handlebtn1 = () => {
+            let rgba1 = hexaValues();
+            console.log(rgb1)
+        }
+
+        const handlebtn2 = () => {
+            let rgba2 = hexaValues();
+            console.log(rgb2)
+        }
+
+        btn1.addEventListener("click", handlebtn1);
+        btn2.addEventListener("click",handlebtn2);
+
     </script>
 </body>
 
