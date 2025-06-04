@@ -12,7 +12,11 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+    body{
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden auto;
+    }
     .cover {
         height: 100vh;
         width: 100vw;
@@ -42,7 +46,7 @@
         width: 20%;
         border-left: 3px solid #5a5252;
         line-height: 24px;
-        /* margin-left: 20px; */
+        font-size: 20px;
         padding: 10px;
         border-radius: 5px;
         /* background-color: aquamarine; */
@@ -71,6 +75,8 @@
     <script>
         let btn1 = document.getElementById("bts1");
         let btn2 = document.getElementById("bts2");
+        let textDiv = document.querySelector(".p-tag")
+        let bodyColor = document.querySelector(".cover")
 
         const hexaValues = () => {
             let color = '#'
@@ -80,19 +86,30 @@
             }
             return color
         }
-
+        let rgba1 = "#444"
+        let rgba2 = "#000"
         const handlebtn1 = () => {
-            let rgba1 = hexaValues();
-            console.log(rgb1)
+            rgba1 = hexaValues();
+            console.log(rgba1)
+            btn1.innerHTML = rgba1
+            bodyColor.style.backgroundImage = `linear-gradient(to right,
+                ${rgba1}, #444)`; 
+            textDiv.innerHTML = `linear-gradient(to right,
+                ${rgba1}, ${rgba2})`
         }
 
         const handlebtn2 = () => {
-            let rgba2 = hexaValues();
-            console.log(rgb2)
+            rgba2 = hexaValues();
+            console.log(rgba2)
+            btn2.innerHTML = rgba2
+            bodyColor.style.backgroundImage = `linear-gradient(to right,
+                ${rgba1}, ${rgba2})`; 
+            textDiv.innerHTML = `linear-gradient(to right,
+                ${rgba1}, ${rgba2})`
         }
 
         btn1.addEventListener("click", handlebtn1);
-        btn2.addEventListener("click",handlebtn2);
+        btn2.addEventListener("click", handlebtn2);
 
     </script>
 </body>
