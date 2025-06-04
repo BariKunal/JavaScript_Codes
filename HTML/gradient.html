@@ -35,25 +35,36 @@
 
     }
 
-    .btn {
+    .btn1 {
         height: 60px;
         width: 140px;
-        border-radius: 10px;
+        border-radius: 25px;
         margin: 20px;
         font-size: 20px;
+        background-color: rgb(13, 4, 75);
+        color: white;
+    }
+    .btn2 {
+        height: 60px;
+        width: 140px;
+        border-radius: 25px;
+        margin: 20px;
+        font-size: 20px;
+        background-color: rgb(161, 255, 39);
+        color: rgb(81, 46, 46);
     }
 
     .p-tag {
         width: 20%;
         border-left: 3px solid #5a5252;
-        line-height: 24px;
+        line-height: 28px;
         font-size: 20px;
         padding: 10px;
-        gap: 20px;
+        color: white;
         border-radius: 5px;
         /* background-color: aquamarine; */
         background-color: rgba(190, 189, 189, 0.1);
-        background-image: linear-gradient(to right, rgb(47, 52, 211) rgb(80, 39, 91));
+        /* background-image: linear-gradient(to right, rgb(47, 52, 211) rgb(80, 39, 91)); */
     }
 </style>
 
@@ -62,8 +73,8 @@
         <div class="cover">
             <div class="box">
 
-                <button class="btn" id="bts1">#f00000</button>
-                <button class="btn" id="bts2">#000000</button>
+                <button class="btn1" id="bts1">#f56743</button>
+                <button class="btn2" id="bts2">#635c28</button>
             </div>
             <h2>Copy Your Code Here</h2>
             <div class="p-tag">
@@ -82,7 +93,7 @@
 
         const hexaValues = () => {
             let color = '#'
-            let hexaValue = "0123456789abcdef"
+            let hexaValue = "0123456789abcdef"             
             for (let i = 0; i < 6; i++) {
                 color += hexaValue[Math.floor(Math.random() * 16)];
             }
