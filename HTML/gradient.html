@@ -12,11 +12,13 @@
         padding: 0;
         box-sizing: border-box;
     }
-    body{
+
+    body {
         height: 100vh;
         width: 100vw;
         overflow: hidden auto;
     }
+
     .cover {
         height: 100vh;
         width: 100vw;
@@ -44,6 +46,7 @@
         background-color: rgb(13, 4, 75);
         color: white;
     }
+
     .btn2 {
         height: 60px;
         width: 140px;
@@ -93,7 +96,7 @@
 
         const hexaValues = () => {
             let color = '#'
-            let hexaValue = "0123456789abcdef"             
+            let hexaValue = "0123456789abcdef"
             for (let i = 0; i < 6; i++) {
                 color += hexaValue[Math.floor(Math.random() * 16)];
             }
@@ -106,7 +109,7 @@
             console.log(rgba1)
             btn1.innerHTML = rgba1
             bodyColor.style.backgroundImage = `linear-gradient(to right,
-                ${rgba1}, #444)`; 
+                ${rgba1}, #444)`;
             textDiv.innerHTML = `linear-gradient(to right,
                 ${rgba1}, ${rgba2})`
         }
@@ -116,7 +119,7 @@
             console.log(rgba2)
             btn2.innerHTML = rgba2
             bodyColor.style.backgroundImage = `linear-gradient(to right,
-                ${rgba1}, ${rgba2})`; 
+                ${rgba1}, ${rgba2})`;
             textDiv.innerHTML = `linear-gradient(to right,
                 ${rgba1}, ${rgba2})`
         }
