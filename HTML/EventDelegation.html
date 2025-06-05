@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            color: white;
+        }
+        #list{
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        li{
+            height: 40px;
+            width: 170px;
+            border-radius: 10px;
+            font-size: 18px;
+            border: 2px solid white;
+            color: white;
+            list-style-type: none;
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .container p{
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="list">
+            <li>Java</li>
+            <li>Node</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+        <p id="para"></p>
+    </div>
+
+    <script>
+        const getDetails = (event) =>{
+            console.log(event.target);
+            
+            document.getElementById('para').innerText = event.target.textContent
+        }
+
+        document.getElementById("list").addEventListener("click", getDetails)
+    </script>
+</body>
+</html>
