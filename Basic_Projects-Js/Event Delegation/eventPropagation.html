@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+
+    <style>
+        body {
+            font-size: 18px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .main {
+            /* height: 100%;
+            width: 100%; */
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .element {
+            height: 80px;
+            width: 80px;
+            border: 1px solid wheat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Delegation</h1>
+    <div class="main" id="main-div">
+
+    </div>
+
+    <script>
+        let body = document.getElementById("main-div")
+        for (let i = 1; i <= 50; i++) {
+            let text = document.createElement("div")
+            text.innerHTML = i
+            // text.style.height="30px"            
+            // text.style.widows="100px"            
+            // text.style.border="1px solid white"            
+
+            body.append(text)
+        }
+
+        let tableInfo = (e) =>{
+            alert(hii)
+        }
+
+        document.addEventListener("click", tableInfo)
+
+    </script>
+</body>
+
+</html>
