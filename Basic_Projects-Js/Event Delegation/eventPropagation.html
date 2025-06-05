@@ -8,11 +8,10 @@
 
     <style>
         body {
-            font-size: 18px;
+            font-size: 15px;
             background-color: black;
             color: white;
             text-align: center;
-            flex-wrap: wrap;
             justify-content: center;
         }
 
@@ -20,14 +19,17 @@
             /* height: 100%;
             width: 100%; */
             display: flex;
+            flex-wrap: wrap;
+            margin-top: 80px;
             justify-content: center;
-            gap: 5px;
+            gap: 10px;
         }
 
-        .element {
+        .text {
             height: 80px;
-            width: 80px;
+            width: 90px;
             border: 1px solid wheat;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -37,28 +39,34 @@
 </head>
 
 <body>
-    <h1>Event Delegation</h1>
+    <h1 style="font-size: 38px; margin-top: 40px; color: wheat">Event Delegation</h1>
     <div class="main" id="main-div">
 
     </div>
 
     <script>
         let body = document.getElementById("main-div")
-        for (let i = 1; i <= 50; i++) {
+
+        let createPeriodicEle = (symbol, atomicNum, name) => {
             let text = document.createElement("div")
-            text.innerHTML = i
-            // text.style.height="30px"            
-            // text.style.widows="100px"            
-            // text.style.border="1px solid white"            
+            text.classList.add("text")
+            text.innerHTML = symbol
+
+            return text
+        }
+        for (let i = 1; i <= 50; i++) {
+            let text = createPeriodicEle(`Elem ${i}, Element ${i}`)
+            // document.createElement("div")
+            // text.innerHTML = i           
 
             body.append(text)
         }
 
-        let tableInfo = (e) =>{
-            alert(hii)
+        let tableInfo = (e) => {
+            alert(e.target.innerHTML)
         }
 
-        document.addEventListener("click", tableInfo)
+        body.addEventListener("click", tableInfo)
 
     </script>
 </body>
