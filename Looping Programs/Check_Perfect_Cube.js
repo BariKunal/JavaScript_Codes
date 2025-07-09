@@ -9,7 +9,7 @@ let i = 1
 while (i * i * i < num) {
     i++
 }
-console.log(cube);
+// console.log(cube);
 
 if (num == i * i * i) {
     console.log("Perfect Cube...")
