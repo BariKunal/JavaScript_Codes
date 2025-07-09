@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="EMI.css">
 </head>
+
 <body>
     <div class="container">
+
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+                
+            </div>
+            <div class="col-md-auto">
+                
+            </div>
+            <div class="col col-lg-2">
+                
+            </div>
+        </div>
+
         <h1>Home Loan EMI Calculator</h1>
         <div class="all_input">
             <!-- <label >Loan Amount</label> -->
             <input type="range" id="amount" min="100000" max="5000000" step="1" value="2000000">
-            <input type="text"  id="val" readonly placeholder="Loan Amount">
+            <input type="text" id="val" readonly placeholder="Loan Amount">
         </div>
 
         <div class="all_input">
             <!-- <label>Tenure (Years)</label> -->
-            <input type="range"  id="year" min="1" max="30" step="1" value="15">
-            <input type="text"  id="yValue" placeholder="Tenure (Years)">
+            <input type="range" id="year" min="1" max="30" step="1" value="15">
+            <input type="text" id="yValue" placeholder="Tenure (Years)">
         </div>
 
         <div class="all_input">
@@ -38,4 +53,5 @@
     <script src="EMI.js"></script>
 
 </body>
+
 </html>
