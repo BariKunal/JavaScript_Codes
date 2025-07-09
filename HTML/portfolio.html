@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Portfolio</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<style>
+
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  /* background-image: url(/vid.mp4); */
+}
+section h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#hero {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+}
+.kb{
+    background-size: 50%;
+    background-position: 100%,100%;
+}
+</style>
+</head>
+<body>
+ <video class="kb" src="/vid.mp4" autoplay ></video>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Branding + links -->
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="text-center py-5">
+    <h1>Hello, I'm Kunal Bari</h1>
+    <p>Java Full Stack Developer | DevOps | SQL</p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="container py-5">
+    <h2>About Me</h2>
+    <p>Brief intro...</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container py-5">
+    <h2>Projects</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="images/project1.png" class="card-img-top" alt="Project Image">
+          <div class="card-body">
+            <h5 class="card-title">Product CRUD App</h5>
+            <p class="card-text">Node.js, MySQL, EJS</p>
+            <a href="https://github.com/BariKunal/Node_Mini_Project" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more projects similarly -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container py-5">
+    <h2>Contact</h2>
+    <form>
+      <!-- Form with name, email, message -->
+    </form>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    © 2025 Kunal Bari | All Rights Reserved
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init(); // for scroll animations
+  </script>
+</body>
+</html>
