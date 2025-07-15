@@ -9,3 +9,4 @@ let str = "hello world"
 let emptyStr = str.trim().split(' ');
 
 console.log(emptyStr);
+
